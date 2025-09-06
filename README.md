@@ -48,6 +48,11 @@ The template starts out very basic, but might receive additional features over t
 
 9. Enjoy!
 
+### Running the Program
+```
+make run
+```
+
 ## Upgrading SFML
 
 SFML is found via CMake's [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) module.
