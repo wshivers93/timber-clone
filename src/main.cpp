@@ -1,21 +1,25 @@
 #include <SFML/Graphics.hpp>
+using namespace sf;
 
 int main()
 {
-    auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
+    auto window = RenderWindow(VideoMode({1920u, 1080u}), "Timber Clone");
     window.setFramerateLimit(144);
 
     while (window.isOpen())
     {
-        while (const std::optional event = window.pollEvent())
+        // user input
+        if (Keyboard::isKeyPressed(Keyboard::Scan::Escape))
         {
-            if (event->is<sf::Event::Closed>())
-            {
-                window.close();
-            }
+           window.close(); 
         }
 
-        window.clear();
-        window.display();
+        // update
+
+        // draw
+
+        // below is process called Double Buffering
+        window.clear(); // removes previous frame
+        window.display(); // flip to new frame
     }
 }
